@@ -36,8 +36,14 @@ Here, we associate a class label to each pixel similar to semantic segmentation,
 It is a tight rectangle used to enclose the object of interest. It is generally described by four values : (bx, by, bh, bw) .
 Where (bx, by) are the co-ordinates of the center of the box and bh, bw are the height and width of the box respectively measured on a scale of 0 to 1.
 
+
+![Screen Shot 2022-11-04 at 12 07 11 PM](https://user-images.githubusercontent.com/68578215/200055855-b27dd501-f4ec-48a6-8ce9-28416e1444dd.png)
+
+
 ## Anchor Boxes
 These are a set of predefined bounding boxes of a certain height and width. These boxes are defined to capture the scale and aspect ratio of specific object classes you want to detect and are typically chosen based on object sizes in your training data-sets. During detection, the predefined anchor boxes are tiled across the image. The network predicts the probability and other attributes, such as background, intersection over union (IoU) and offsets for every tiled anchor box. The predictions are used to refine each individual anchor box. You can define several anchor boxes, each for a different object size.
+
+![Screen Shot 2022-11-04 at 12 07 06 PM](https://user-images.githubusercontent.com/68578215/200055859-b909d532-3748-4b81-91f2-af1d159f7036.png)
 
 
 
@@ -53,7 +59,11 @@ Intersection over Union (IOU) :
 
 It is an evaluation metric used to check the accuracy of the predicted bounding box w.r.t the actual ground truth.
 
+![Screen Shot 2022-11-04 at 12 06 59 PM](https://user-images.githubusercontent.com/68578215/200055861-43e2392d-26aa-40d7-9d3b-6de59a5e824b.png)
+
+
 
 
 An IOU of > 0.5 is considered as a good prediction and is used for further evaluation.
 
+![Screen Shot 2022-11-04 at 12 06 54 PM](https://user-images.githubusercontent.com/68578215/200055862-41bda4e5-d2b7-429b-895b-f1232d04d095.png)
